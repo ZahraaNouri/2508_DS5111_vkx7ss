@@ -1,6 +1,7 @@
 import sys
-sys.path.append('.')
+import platform
 
+sys.path.append('.')
 import bin.normalize as normalize
 
 

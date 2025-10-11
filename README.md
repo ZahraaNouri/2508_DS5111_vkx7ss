@@ -1,3 +1,5 @@
+[![Feature Validation](https://github.com/ZahraaNouri/2508_DS5111_vkx7ss/actions/workflows/validations.yml/badge.svg)](https://github.com/ZahraaNouri/2508_DS5111_vkx7ss/actions/workflows/validations.yml)
+
 # VM Bootstrap & Development Environment Setup
 
 ![Status](https://img.shields.io/badge/status-complete-brightgreen)

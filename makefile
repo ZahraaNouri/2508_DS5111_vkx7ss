@@ -20,6 +20,22 @@ wsjgainers.html:
 wsjgainers.csv: wsjgainers.html
 	python -c "import pandas as pd; raw = pd.read_html('wsjgainers.html'); raw[0].to_csv('wsjgainers.csv')"
 
+
+
+.PHONY: wsjgainers_tstamp ygainers_tstamp 
+wsjgainers_tstamp: wsjgainers.csv
+	mv wsjgainers.csv wsjgainers_$(shell date +"%Y%m%d_%H%M%S").csv
+
+ygainers_tstamp: ygainers.csv
+	mv ygainers.csv ygainers_$(shell date +"%Y%m%d_%H%M%S").csv
+
+
+.PHONY: clean
+clean:
+	rm wsjgainers.html wsjgainers.csv ygainers.html ygainers.csv | true
+
+
+
 lint:
 	. env/bin/activate; pylint bin/normalize.py
 
